@@ -1,0 +1,158 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+:root {
+    --main-bg-color: rgb(235,230,211);
+    --navbar-bg-color: rgb(143,200,219);
+    --navbar-fg-color: rgb(200,82,78);
+    --card-bg-color: white;
+
+    --navbar-font-size: 3rem;
+    --navbar-font-size-tablet: 2.25rem;
+    --navbar-font-size-mobile: 1.5rem;
+    --navbar-font-size-mobile-small: 1.2rem;
+}
+
+body {
+    background-color: var(--main-bg-color);
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.container-fluid {
+    margin-bottom: 3rem;
+}
+
+.navbar {
+    font-family: 'Pacifico', cursive;
+    color: var(--navbar-fg-color);
+    background-color: var(--navbar-bg-color);
+}
+.footer-fluid{
+    background-color: var(--main-bg-color);
+    padding: 0.5rem;
+    max-width: 100%;
+}
+/* Tablet */
+@media (max-width: 1024px) {
+    .navbar {
+        font-size: var(--navbar-font-size-tablet);
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    .navbar-brand {
+        font-size: var(--navbar-font-size-tablet);
+    }
+    .footer-fluid {
+        font-size: 0.75rem;
+        padding: 0.25rem;
+    }
+    .container-fluid {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+/* Mobile */
+@media (max-width: 500px) {
+    .navbar {
+        font-size: var(--navbar-font-size-mobile);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .navbar-brand {
+        font-size: var(--navbar-font-size-mobile);
+    }
+    .container-fluid {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+/* Tiny Mobile */
+@media (max-width: 360px) {
+    .navbar {
+        font-size: var(--navbar-font-size-mobile-small);
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    .navbar-brand {
+        font-size: var(--navbar-font-size-mobile-small);
+    }
+}
+/* Desktop */
+@media (min-width: 1025px) {
+    .navbar {
+        font-size: var(--navbar-font-size);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+    .navbar-brand {
+        font-size: var(--navbar-font-size);
+    }
+}
+
+.card {
+    background-color: var(--card-bg-color);
+}
+.card-title {
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.card-body {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+.card-columns .card {
+    margin-bottom: 0.5rem;
+}
+
+@media (min-width: 576px){
+    .container {
+        max-width: 9540px;
+}}
+
+@media (min-width: 520px) {
+    .card-columns {
+        column-count: 2;
+        column-gap: 0.5rem;
+        orphans: 1;
+        widows: 1;
+    }
+    .card-columns .card {
+        display: inline-block;
+        width: 100%;
+    }
+}
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+@media (min-width: 768px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 4;
+    }
+}
+@media (min-width: 1200px) {
+    .card-columns {
+        column-count: 5;
+    }
+}
+@media (min-width: 1400px) {
+    .card-columns {
+        column-count: 6;
+    }
+}
+@media (min-width: 1600px) {
+    .card-columns {
+        column-count: 7;
+    }
+}
+@media (min-width: 1800px) {
+    .card-columns {
+        column-count: 8;
+    }
+}
