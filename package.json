@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build --prod --base-href https://jonaskarhu.github.io/lunch/ && angular-cli-ghpages --branch gh-pages"
+    "deploy": "ng build --prod --base-href https://jonaskarhu.github.io/lunch/ && cp -af dist/lunchpage/. dist/ && rm -rf dist/lunchpage/ && angular-cli-ghpages"
   },
   "private": true,
   "dependencies": {
