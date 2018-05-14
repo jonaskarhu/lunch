@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
   restaurantsArray: Array<Array<string>> = [];
 
   ngOnInit() {
-    this.date = this.ds.getDate();
+    //this.date = this.ds.getDate();
     this.fetchAndPushMenusHTML(
         this,
         "https://www.kvartersmenyn.se/find/_/city/19/sort/n_d/area/inom-vallgraven_81",
@@ -58,23 +58,24 @@ export class AppComponent implements OnInit {
             'Asienköket i Nordstan'
         ]);
   }
-  private checkFetched() {
+  private checkFetched(theString) {
     if (this.restaurantsArray.length > 5){
-        this.date = "yaaaas";
+        this.date = theString;
     }
   }
   private fetchAndPushMenusHTML(t, url, restaurantsToDisplay, restaurantsWithoutPrice) {
     var request = new XMLHttpRequest();
     request.addEventListener("load", function() {
+        t.checkFetched("HTTP resp");
         if ((this.readyState == 4) && (this.status == 200) && (this.responseText !== undefined)) {
             var page = this.responseText;
             var parser = new DOMParser();
             var htmlDoc = parser.parseFromString(page, "text/html");
             var restaurants = htmlDoc.getElementsByClassName("row t_lunch");
             t.pushArray(restaurants, restaurantsToDisplay, restaurantsWithoutPrice);
-            t.checkFetched();
         }
     })
+    t.checkFetched("Trying HTTPreq");
     request.open("GET", url);
     request.send();
   }
