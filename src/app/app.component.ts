@@ -58,7 +58,11 @@ export class AppComponent implements OnInit {
             'Asienköket i Nordstan'
         ]);
   }
-
+  private checkFetched() {
+    if (this.restaurantsArray.length > 5){
+        this.date = "yaaaas";
+    }
+  }
   private fetchAndPushMenusHTML(t, url, restaurantsToDisplay, restaurantsWithoutPrice) {
     var request = new XMLHttpRequest();
     request.addEventListener("load", function() {
@@ -68,6 +72,7 @@ export class AppComponent implements OnInit {
             var htmlDoc = parser.parseFromString(page, "text/html");
             var restaurants = htmlDoc.getElementsByClassName("row t_lunch");
             t.pushArray(restaurants, restaurantsToDisplay, restaurantsWithoutPrice);
+            t.checkFetched();
         }
     })
     request.open("GET", url);
