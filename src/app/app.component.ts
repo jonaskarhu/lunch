@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     this.date = this.ds.getDate();
     this.fetchAndPushMenusHTML(
         this,
-        "http://www.kvartersmenyn.se/find/_/city/19/sort/n_d/area/inom-vallgraven_81",
+        "https://www.kvartersmenyn.se/find/_/city/19/sort/n_d/area/inom-vallgraven_81",
         [
             'Zaffran- A Taste of Persia',
             'Today sushi',
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
         ]);
     this.fetchAndPushMenusHTML(
         this,
-        "http://www.kvartersmenyn.se/find/_/city/0/keyword/0/area/nordstan_483",
+        "https://www.kvartersmenyn.se/find/_/city/0/keyword/0/area/nordstan_483",
         [
             'Asienköket i Nordstan',
             'Bon Vivant',
