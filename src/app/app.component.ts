@@ -59,9 +59,7 @@ export class AppComponent implements OnInit {
         ]);
   }
   private checkFetched(theString) {
-    if (this.restaurantsArray.length > 5){
         this.date = theString;
-    }
   }
   private fetchAndPushMenusHTML(t, url, restaurantsToDisplay, restaurantsWithoutPrice) {
     var request = new XMLHttpRequest();
