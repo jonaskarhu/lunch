@@ -10,6 +10,7 @@
     "e2e": "ng e2e",
     "deploy": "ng build --prod --base-href https://jonaskarhu.github.io/lunch/ && cp -af dist/lunchpage/. dist/ && rm -rf dist/lunchpage/ && angular-cli-ghpages"
   },
+  "permissions": ["https://*/"],
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.0",
