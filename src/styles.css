@@ -111,6 +111,8 @@ body {
 
 @media (min-width: 0px) {
     .card-columns {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
         column-count: 1;
         column-gap: 0.5rem;
         orphans: 1;
@@ -122,38 +124,52 @@ body {
     }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 400px) {
     .card-columns {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
         column-count: 2;
     }
 }
 @media (min-width: 768px) {
     .card-columns {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
         column-count: 3;
     }
 }
 @media (min-width: 992px) {
     .card-columns {
+        -webkit-column-count: 4;
+        -moz-column-count: 4;
         column-count: 4;
     }
 }
 @media (min-width: 1200px) {
     .card-columns {
+        -webkit-column-count: 5;
+        -moz-column-count: 5;
         column-count: 5;
     }
 }
 @media (min-width: 1400px) {
     .card-columns {
+        -webkit-column-count: 6;
+        -moz-column-count: 6;
         column-count: 6;
     }
 }
 @media (min-width: 1600px) {
     .card-columns {
+        -webkit-column-count: 7;
+        -moz-column-count: 7;
         column-count: 7;
     }
 }
 @media (min-width: 1800px) {
     .card-columns {
+        -webkit-column-count: 8;
+        -moz-column-count: 8;
         column-count: 8;
     }
 }
