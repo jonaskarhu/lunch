@@ -17,5 +17,8 @@
             "type": "image/x-icon",
             "sizes": "600x600"
         }],
-    "permissions": ["https://*/"]
+    "permissions": [
+        "...",
+        "https://www.kvartersmenyn.se/"
+    ]
 }
