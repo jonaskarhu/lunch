@@ -1,0 +1,10 @@
+{
+    "name": "Lunch i City",
+    "short_name": "Lunch",
+    "description": "Visar dagens lunch för ett urval av restauranger i centrala Göteborg.",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ebe6d3",
+    "theme_color": "#8fc8db",
+    "permissions": ["https://*/"]
+}
