@@ -71,6 +71,9 @@ export class AppComponent implements OnInit {
             var htmlDoc = parser.parseFromString(page, "text/html");
             var restaurants = htmlDoc.getElementsByClassName("row t_lunch");
             t.pushArray(restaurants, restaurantsToDisplay, restaurantsWithoutPrice);
+            if (t.restaurantsArray.length > 1) {
+                t.date = t.ds.getDate();
+            }
         }
     })
     t.checkFetched("Trying HTTPreq");
