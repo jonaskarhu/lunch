@@ -78,7 +78,7 @@ export class AppComponent implements OnInit {
     })
     t.checkFetched("Trying HTTPreq");
     request.open("GET", url);
-    request.setRequestHeader("Content-Type", "text/xml");
+    request.setRequestHeader("Content-Type", "text/html");
     request.send();
   }
 
