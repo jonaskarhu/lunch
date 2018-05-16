@@ -16,9 +16,5 @@
             "src": "favicon.ico",
             "type": "image/x-icon",
             "sizes": "600x600"
-        }],
-    "permissions": [
-        "...",
-        "https://www.kvartersmenyn.se/"
-    ]
+        }]
 }
