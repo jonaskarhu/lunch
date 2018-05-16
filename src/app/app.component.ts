@@ -62,8 +62,23 @@ export class AppComponent implements OnInit {
         this.date = theString;
   }
   private fetchAndPushMenusHTML(t, url, restaurantsToDisplay, restaurantsWithoutPrice) {
-    var request = new XMLHttpRequest();
-    request.addEventListener("load", function() {
+    // var request = new XMLHttpRequest();
+    // request.addEventListener("load", function() {
+    //     t.checkFetched("HTTP resp");
+    //     if ((this.readyState == 4) && (this.status == 200) && (this.responseText !== undefined)) {
+    //         var page = this.responseText;
+    //         var parser = new DOMParser();
+    //         var htmlDoc = parser.parseFromString(page, "text/html");
+    //         var restaurants = htmlDoc.getElementsByClassName("row t_lunch");
+    //         t.pushArray(restaurants, restaurantsToDisplay, restaurantsWithoutPrice);
+    //         if (t.restaurantsArray.length > 1) {
+    //             t.date = t.ds.getDate();
+    //         }
+    //     }
+    // })
+    var request = t.createCORSRequest("GET", url);
+
+    request.onload = function () {
         t.checkFetched("HTTP resp");
         if ((this.readyState == 4) && (this.status == 200) && (this.responseText !== undefined)) {
             var page = this.responseText;
@@ -75,11 +90,30 @@ export class AppComponent implements OnInit {
                 t.date = t.ds.getDate();
             }
         }
-    })
+    }
+
     t.checkFetched("Trying HTTPreq");
-    request.open("GET", url);
-    request.setRequestHeader("Content-Type", "text/html");
+    if (!request) {
+        console.log("Couldn't fetch from webpage!");
+        alert("CORS is not supported!");
+    }
+    request.open("GET", url, true);
     request.send();
+  }
+  private createCORSRequest(method, url) {
+    var xhr = new XMLHttpRequest();
+    if ("withCredentials" in xhr) {
+      // XHR for Chrome/Firefox/Opera/Safari.
+      xhr.open(method, url, true);
+    // } else if (typeof XDomainRequest != "undefined") {
+    //   // XDomainRequest for IE.
+    //   xhr = new XDomainRequest();
+    //   xhr.open(method, url);
+    } else {
+      // CORS not supported.
+      xhr = null;
+    }
+    return xhr;
   }
 
   private pushArray(restaurants, restaurantsToDisplay, restaurantsWithoutPrice) {
