@@ -7,9 +7,13 @@
     --card-bg-color: white;
 
     --navbar-font-size: 3rem;
+    --navbar-font-size-half: 1.5rem;
     --navbar-font-size-tablet: 2.25rem;
-    --navbar-font-size-mobile: 1.5rem;
+    --navbar-font-size-tablet-half: 1.125rem;
+    --navbar-font-size-mobile: 1.8rem;
+    --navbar-font-size-mobile-half: 0.9rem;
     --navbar-font-size-mobile-small: 1.2rem;
+    --navbar-font-size-mobile-small-half: 0.6rem;
 }
 
 body {
@@ -41,6 +45,9 @@ body {
     .navbar-brand {
         font-size: var(--navbar-font-size-tablet);
     }
+    .navbar-text {
+        font-size: var(--navbar-font-size-tablet-half);
+    }
     .footer-fluid {
         font-size: 0.75rem;
         padding: 0.25rem;
@@ -60,6 +67,9 @@ body {
     .navbar-brand {
         font-size: var(--navbar-font-size-mobile);
     }
+    .navbar-text {
+        font-size: var(--navbar-font-size-mobile-half);
+    }
     .container-fluid {
         padding-left: 5px;
         padding-right: 5px;
@@ -75,6 +85,9 @@ body {
     .navbar-brand {
         font-size: var(--navbar-font-size-mobile-small);
     }
+    .navbar-text {
+        font-size: var(--navbar-font-size-mobile-small-half);
+    }
 }
 /* Desktop */
 @media (min-width: 1025px) {
@@ -85,6 +98,9 @@ body {
     }
     .navbar-brand {
         font-size: var(--navbar-font-size);
+    }
+    .navbar-text {
+        font-size: var(--navbar-font-size-half);
     }
 }
 
@@ -124,7 +140,7 @@ body {
     }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 375px) {
     .card-columns {
         -webkit-column-count: 2;
         -moz-column-count: 2;
