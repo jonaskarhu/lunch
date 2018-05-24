@@ -1,10 +1,16 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 :root {
-    --main-bg-color: rgb(235,230,211);
+    /* --main-bg-color: rgb(235,230,211);
     --navbar-bg-color: rgb(143,200,219);
     --navbar-fg-color: rgb(200,82,78);
-    --card-bg-color: white;
+    --card-bg-color: white; */
+
+    --main-bg-color: rgb(104,161,156);
+    --navbar-bg-color: rgb(13,29,50);
+    --navbar-fg-color: rgb(244,167,29);
+    --card-bg-color: rgb(230,242,242);;
+    --card-fg-color: var(--navbar-bg-color);
 
     --navbar-font-size: 3rem;
     --navbar-font-size-half: 1.5rem;
@@ -32,6 +38,7 @@ body {
 }
 .footer-fluid{
     background-color: var(--main-bg-color);
+    color: var(--card-bg-color);
     padding: 0.5rem;
     max-width: 100%;
 }
@@ -48,6 +55,10 @@ body {
     .navbar-text {
         font-size: var(--navbar-font-size-tablet-half);
     }
+    .navbar-text .wu {
+        max-width: 50px;
+        max-height: 50px;
+    }
     .footer-fluid {
         font-size: 0.75rem;
         padding: 0.25rem;
@@ -58,17 +69,21 @@ body {
     }
 }
 /* Mobile */
-@media (max-width: 500px) {
+@media (max-width: 560px) {
     .navbar {
         font-size: var(--navbar-font-size-mobile);
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
     .navbar-brand {
-        font-size: var(--navbar-font-size-mobile);
+        font-size: var(--navbar-font-size-mobile-half);
     }
     .navbar-text {
         font-size: var(--navbar-font-size-mobile-half);
+    }
+    .navbar-text .wu {
+        max-width: 30px;
+        max-height: 30px;
     }
     .container-fluid {
         padding-left: 5px;
@@ -76,17 +91,21 @@ body {
     }
 }
 /* Tiny Mobile */
-@media (max-width: 360px) {
+@media (max-width: 350px) {
     .navbar {
         font-size: var(--navbar-font-size-mobile-small);
         padding-left: 0.5rem;
         padding-right: 0.5rem;
     }
     .navbar-brand {
-        font-size: var(--navbar-font-size-mobile-small);
+        font-size: var(--navbar-font-size-mobile-small-half);
     }
     .navbar-text {
         font-size: var(--navbar-font-size-mobile-small-half);
+    }
+    .navbar-text .wu {
+        max-width: 25px;
+        max-height: 25px;
     }
 }
 /* Desktop */
@@ -102,6 +121,10 @@ body {
     .navbar-text {
         font-size: var(--navbar-font-size-half);
     }
+    .navbar-text .wu {
+        max-width: 70px;
+        max-height: 70px;
+    }
 }
 
 .card {
@@ -111,10 +134,12 @@ body {
     margin-bottom: 0.25rem;
     font-size: 1rem;
     font-weight: bold;
+    color: var(--card-fg-color);
 }
 .card-body {
     padding: 0.5rem;
     font-size: 0.8rem;
+    color: var(--card-fg-color);
 }
 .card-columns .card {
     margin-bottom: 0.5rem;

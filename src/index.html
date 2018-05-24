@@ -7,10 +7,11 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'unsafe-eval' 'self' https://www.kvartersmenyn.se/*/; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com/; font-src 'self' https://fonts.gstatic.com data:">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#8fc8db">
+
+  <!-- ?v=<?php echo filemtime('favicon.ico') ? to force favicon update in browsers -->
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=<?php echo filemtime('favicon.ico') ?">
   <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lato|Lobster|Montserrat|Open+Sans|Pacifico|Roboto" rel="stylesheet">
-
 </head>
 <body>
   <app-root></app-root>
