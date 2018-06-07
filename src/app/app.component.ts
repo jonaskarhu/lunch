@@ -6,7 +6,7 @@ import { timer } from 'rxjs';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css',
-              '../../node_modules/weather-underground-icons/dist/wu-icons-style.css?v=1.0.1'],
+              '../../node_modules/weather-underground-icons/dist/wu-icons-style.css'],
   providers: [DateService]
 })
 
